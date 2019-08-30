@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/serviceName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/grey.dark" />
+
+        <ToggleButton
+            android:id="@+id/serviceState"
+            android:background="@null"
+            android:text="@null"
+            android:textOff="@null"
+            android:textOn="@null"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+    </LinearLayout>
+
+</layout>

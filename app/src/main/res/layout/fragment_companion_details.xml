@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppTextAppearance.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/margin_quarter"
+                    android:text="@string/route" />
+
+                <LinearLayout
+                    android:id="@+id/rotes"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    style="@style/AppTextAppearance.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/margin_quarter"
+                    android:text="@string/followers" />
+
+                <LinearLayout
+                    android:id="@+id/followers"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/AppTextAppearance.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:layout_marginRight="@dimen/margin_quarter"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/tv_cost"
+                    android:textSize="18sp"
+                    style="@style/AppTextAppearance.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    style="@style/AppTextAppearance.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:layout_marginRight="@dimen/margin_quarter"
+                    android:text="@string/ride_time" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:textSize="18sp"
+                    style="@style/AppTextAppearance.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <Button
+                style="@style/AppTheme.Button.PrimaryDark"
+                android:id="@+id/btn_make_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/car_searching"
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/margin_quarter"
+                android:layout_marginBottom="@dimen/margin_quarter"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

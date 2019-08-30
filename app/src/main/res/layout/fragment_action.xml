@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/textColorPrimary"
+            tools:text="Ваша попутчица подмигнула Вам"
+            style="@style/AppTextAppearance.Headline.Inverse"/>
+
+        <com.sergey.taxiservice.ui.views.ViewUserGeneralInfo
+            android:id="@+id/generalInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnSendMessage"
+            style="@style/AppTheme.Button.PrimaryLight"
+            android:layout_width="260dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="@string/view_text_write_message"
+            android:textSize="@dimen/text_size_body_1"/>
+
+        <RelativeLayout
+            android:id="@+id/btn_send_winks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/winksTitle"
+                style="@style/AppTheme.Button.PrimaryLight"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:paddingStart="60dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_red"
+                android:text="@string/view_text_winks_response"
+                android:textSize="@dimen/text_size_body_1" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/heart_white"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="22dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_solo_respect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/respectTitle"
+                style="@style/AppTheme.Button.PrimaryLight"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:paddingStart="60dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_red"
+                android:text="@string/view_text_respect_response"
+                android:textSize="@dimen/text_size_body_1"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/hand_shake_white"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="22dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.sergey.taxiservice.ui.views.ViewUserGeneralInfo
+                    android:id="@+id/generalInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"/>
+
+                <com.sergey.taxiservice.ui.views.FeedbackGradeView
+                    android:id="@+id/feedback"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:id="@+id/btn_show_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/feedbackTitle"
+                        style="@style/AppTheme.Button.PrimaryLight"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="60dp"
+                        android:text="@string/view_text_show_feedback"
+                        android:textSize="@dimen/text_size_body_1"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/stars"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="22dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_write_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/writeTitle"
+                        style="@style/AppTheme.Button.PrimaryLight"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="60dp"
+                        android:text="@string/view_text_write_message"
+                        android:textSize="@dimen/text_size_body_1"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/comments"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="22dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_send_winks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/winksTitle"
+                        style="@style/AppTheme.Button.PrimaryLight"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="60dp"
+                        android:text="@string/view_text_send_winks"
+                        android:textSize="@dimen/text_size_body_1" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/heart"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="22dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_solo_respect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/respectTitle"
+                        style="@style/AppTheme.Button.PrimaryLight"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="60dp"
+                        android:text="@string/view_text_send_respect"
+                        android:textSize="@dimen/text_size_body_1"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/handshake"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="22dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/AppTextAppearance.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/i_on_social_networks"
+                    android:layout_marginTop="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_vk"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_circle_vk"
+                        android:layout_margin="@dimen/margin_quarter"/>
+
+                    <ImageView
+                        android:id="@+id/iv_fb"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_circle_fb"
+                        android:layout_margin="@dimen/margin_quarter"/>
+
+                    <ImageView
+                        android:id="@+id/iv_gplus"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_circle_gplus"
+                        android:layout_margin="@dimen/margin_quarter"/>
+
+                    <ImageView
+                        android:id="@+id/iv_twitter"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_circle_twitter"
+                        android:layout_margin="@dimen/margin_quarter"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

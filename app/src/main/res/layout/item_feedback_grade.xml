@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        tools:text="Пунктуальность" />
+
+    <FrameLayout
+        android:id="@+id/gradeSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        tools:background="@color/green">
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            tools:text="3.9"/>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/grey.dark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey.light"
+                android:textColor="@color/white.light"
+                android:text="@string/view.text.feed_of_car"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"/>
+
+            <LinearLayout
+                android:id="@+id/dateTypesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey.light"
+                android:textColor="@color/white.light"
+                android:text="@string/view.text.type_of_car"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"/>
+
+            <LinearLayout
+                android:id="@+id/carTypesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey.light"
+                android:textColor="@color/white.light"
+                android:text="@string/view.text.type_of_pay"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"/>
+
+            <LinearLayout
+                android:id="@+id/payTypesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/AppTheme.Button.PrimaryLight"
+            android:id="@+id/btn_solo_ride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="220dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Готово"
+            android:textSize="@dimen/text_size_body_1"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</layout>

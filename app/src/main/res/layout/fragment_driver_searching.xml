@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_cancel_order">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <fragment
+                            android:id="@+id/fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:name="com.sergey.taxiservice.ui.fragments.map.MapFragment" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#9061605d">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="15dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_distance"/>
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/formDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="16sp"
+                                        android:textColor="#ffea85"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="На сейчас"/>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_marginStart="30dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_cost"/>
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/tvCost"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="16sp"
+                                        android:textColor="#ffea85"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        tools:text="120 грн."/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_base">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.sergey.taxiservice.ui.views.RoadStopsView
+                                android:id="@+id/roadStops"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                app:strokeColor="#ffea85"
+                                app:textColor="@color/grey.dark"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#c2c2c2"
+                                    android:text="Время заказа:"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#c2c2c2"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="17:36"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#c2c2c2"
+                                    android:text="Тип оплаты:"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/pay"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#c2c2c2"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Наличные"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#c2c2c2"
+                                    android:text="Выбраное авто:"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/car"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#c2c2c2"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Микроавтобус"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/AppTheme.Button.PrimaryDark"
+            android:id="@+id/btn_cancel_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            android:text="@string/cancel_order"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"/>
+
+    </RelativeLayout>
+
+</layout>

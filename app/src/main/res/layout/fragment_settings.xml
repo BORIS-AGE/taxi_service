@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_double"
+                android:paddingRight="@dimen/margin_double"
+                android:paddingTop="@dimen/margin_base"
+                android:paddingBottom="@dimen/margin_base"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/margin_double">
+
+                    <RelativeLayout
+                        android:id="@+id/btn_delete_avatar"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_delete"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_circle_delete"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/margin_quarter"/>
+
+                        <TextView
+                            style="@style/AppTextAppearance.Caption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delete"
+                            android:textStyle="italic"
+                            android:layout_below="@id/iv_delete"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        tools:src="@color/btnPrimary"/>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_add_avatar"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_new"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_circle_add"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/margin_quarter"/>
+
+                        <TextView
+                            style="@style/AppTextAppearance.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_new"
+                            android:maxLines="2"
+                            android:textStyle="italic"
+                            android:layout_below="@id/iv_new"
+                            android:gravity="center"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/phone_number + ':'}"
+                        android:labelFor="@id/et_phone_number"
+                        tools:text="Номер мобильного:"/>
+
+                </LinearLayout>
+
+                <EditText
+                    style="@style/AppTheme.EditText"
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:inputType="phone"
+                    android:layout_marginBottom="@dimen/margin_half_plus_eight"
+                    android:drawableLeft="@drawable/ic_phone"
+                    tools:hint="Login" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/current_password + ':'}"
+                        android:labelFor="@id/et_password"
+                        tools:text="Пароль:"/>
+
+                </LinearLayout>
+
+                <EditText
+                    style="@style/AppTheme.EditText"
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/ic_secure"
+                    tools:text="Login" />
+
+                <TextView
+                    style="@style/AppTextAppearance.Caption"
+                    android:id="@+id/tv_show_hide_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_quarter"
+                    android:layout_marginBottom="@dimen/margin_quarter_plus"
+                    android:layout_gravity="right"
+                    android:textStyle="italic"
+                    android:text='@{@string/show + " / " + @string/hide}'
+                    tools:text="Показать / Скрыть"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/last_name + ':'}"
+                        android:labelFor="@id/et_last_name"
+                        tools:text="Фамилия:"/>
+
+                </LinearLayout>
+
+                <EditText
+                    style="@style/AppTheme.EditText"
+                    android:id="@+id/et_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="@dimen/margin_half_plus_eight"
+                    android:drawableLeft="@drawable/ic_auth_account"
+                    tools:text="Сергеев" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/first_name + ':'}"
+                        android:labelFor="@id/et_first_name"
+                        tools:text="Имя:"/>
+
+                </LinearLayout>
+
+                <EditText
+                    style="@style/AppTheme.EditText"
+                    android:id="@+id/et_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="@dimen/margin_half_plus_eight"
+                    android:drawableLeft="@drawable/ic_auth_account"
+                    tools:text="Сергей" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/patronymic + ':'}"
+                        tools:text="Отчество"
+                        android:labelFor="@id/et_patronymic"/>
+
+                </LinearLayout>
+
+                <EditText
+                    style="@style/AppTheme.EditText"
+                    android:id="@+id/et_patronymic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="@dimen/margin_half_plus_eight"
+                    android:drawableLeft="@drawable/ic_auth_account"
+                    tools:text="Сергеевич" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/view_text_gender + ':'}"
+                        android:labelFor="@id/et_last_name"
+                        tools:text="@string/view_text_gender"/>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="@dimen/margin_half_plus_eight"
+                    android:background="@drawable/background_spinner"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/view_text_age + ':'}"
+                        android:labelFor="@id/et_last_name"
+                        tools:text="@string/view_text_age"/>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="@dimen/margin_half_plus_eight"
+                    android:background="@drawable/background_spinner"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/margin_half">
+
+                    <TextView
+                        style="@style/AppTextAppearance.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_text_about"
+                        android:labelFor="@id/et_last_name"
+                        tools:text="@string/view_text_about"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/about"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="6"
+                    android:gravity="top|left"
+                    android:maxLines="10"
+                    android:hint="@string/view_text_about_hidden"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_marginBottom="30dp"
+                    style="@style/AppTheme.EditText" />
+
+                <Button
+                    style="@style/AppTheme.Button.Primary"
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="140dp"
+                    android:text="@string/save"
+                    android:textSize="@dimen/text_size_body_1"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

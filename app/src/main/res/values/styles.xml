@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:statusBarColor" tools:targetApi="21">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>-->
+        <item name="android:textAppearance">@style/AppTextAppearance</item>
+        <item name="android:textAppearanceButton">@style/AppTextAppearance.Button</item>
+        <!--<item name="android:textViewStyle">@style/DefaultTextView</item>-->
+        <!--<item name="android:windowBackground">@color/windowBackground</item>-->
+    </style>
+
+    <style name="AppTheme.Actionbar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="titleTextStyle">@style/AppTextAppearance.Actionbar</item>
+        <item name="android:titleTextStyle">@style/AppTextAppearance.Actionbar</item>
+    </style>
+
+    <style name="AppTheme.NavigationDrawer">
+        <item name="android:listPreferredItemHeightSmall">40dp</item><!-- item size in menu-->
+        <item name="listPreferredItemHeightSmall">40dp</item><!-- item size in menu-->
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:paddingRight">@dimen/margin_half_plus</item>
+        <item name="android:paddingLeft">@dimen/margin_half_plus</item>
+    </style>
+
+    <style name="AppTheme.Button.PrimaryDark" parent="AppTheme.Button">
+        <item name="android:background">@drawable/btn_primary_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minWidth">@dimen/btn_min_width</item>
+    </style>
+
+    <style name="AppTheme.Button.PrimaryDark.Small" parent="AppTheme.Button.PrimaryDark">
+        <item name="android:minWidth">@dimen/btn_min_width_small</item>
+    </style>
+
+    <style name="AppTheme.Button.Primary" parent="AppTheme.Button">
+        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Button.PrimaryLight" parent="AppTheme.Button">
+        <item name="android:background">@drawable/btn_primary_light</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textAppearance">@style/AppTextAppearance.EditText</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:drawablePadding">@dimen/margin_quarter_plus</item>
+    </style>
+
+    <style name="AppTheme.EditText.Rounded">
+        <item name="android:textAppearance">@style/AppTextAppearance.EditText.Grey</item>
+        <item name="android:background">@drawable/et_rounded_white</item>
+        <item name="android:minHeight">@dimen/btn_rounded_min_height</item>
+    </style>
+
+    <style name="AppTheme.EditText.Rounded.Transparent" parent="AppTheme.EditText.Rounded">
+        <item name="android:background">@drawable/et_rounded_trans</item>
+    </style>
+
+    <style name="AppTheme.ProgressBar.Horizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:max">100</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:backgroundTint" tools:targetApi="21">@color/colorWhite</item>
+        <item name="android:indeterminateTint" tools:targetApi="21">@color/colorAccent</item>
+    </style>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_margin">
+            <EditText
+                android:id="@+id/et_street"
+                style="@style/AppTheme.EditText.Rounded.Transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:editable="false"
+                android:hint="@string/street_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:weightSum="2">
+                <EditText
+                    android:id="@+id/et_house_number"
+                    style="@style/AppTheme.EditText.Rounded.Transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/activity_verical_margin_half"
+                    android:hint="@string/house_number"/>
+
+                <EditText
+                    android:id="@+id/et_entrance"
+                    style="@style/AppTheme.EditText.Rounded.Transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/activity_verical_margin_half"
+                    android:hint="@string/entrance"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

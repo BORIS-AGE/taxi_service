@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="view_array_additional_services">
+        <item>Нужен ли чек?</item>
+        <item>Драйвер</item>
+        <item>Курьер</item>
+        <item>Встретить с табличкою</item>
+        <item>Есть ли багаж?</item>
+        <item>Я с животным</item>
+        <item>Необходим кондиционер?</item>
+        <item>Англоговорящий водитель</item>
+        <item>Некурящий водитель</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>@string/man</item>
+        <item>@string/woman</item>
+    </string-array>
+
+    <string-array name="view_array_feedback_points">
+        <item>Пунктуальность</item>
+        <item>Коммуникабельность</item>
+        <item>Рекомендую</item>
+        <item>Не рекомендую</item>
+    </string-array>
+
+    <array name="view_array_feedback_points_color">
+        <item>@color/green</item>
+        <item>@color/green_bright</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+    </array>
+
+    <array name="view_array_feedback_drawable">
+        <item>@drawable/ic_star_green</item>
+        <item>@drawable/ic_star_green_bright</item>
+        <item>@drawable/ic_star_orange</item>
+        <item>@drawable/ic_star_red</item>
+    </array>
+
+    <integer-array name="view_array_feedback_grades_max">
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+    </integer-array>
+
+    <integer-array name="view_array_feedback_initial_grades">
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
+        <item>1</item>
+    </integer-array>
+    
+</resources>

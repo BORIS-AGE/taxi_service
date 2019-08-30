@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:textSize="20sp"
+                    android:text="@string/view_text_order_information"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:background="@color/grey.light">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="18sp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:text="@string/view_text_car"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/grey.dark"/>
+
+                            <FrameLayout
+                                android:id="@+id/carLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ToggleButton
+                                        android:id="@+id/carImage"
+                                        android:layout_width="60dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:clickable="false"
+                                        android:checked="true"
+                                        android:text="@null"
+                                        android:textOff="@null"
+                                        android:textOn="@null"
+                                        android:layout_gravity="center_horizontal"
+                                        tools:background="@drawable/ic_hatchback"/>
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/carTitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textSize="14sp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:textColor="@color/white"
+                                        tools:text="Стандарт"/>
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/grey.dark">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="18sp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:textColor="@color/white"
+                                android:text="@string/view_text_from_to"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/grey.light"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp">
+
+                                <com.sergey.taxiservice.ui.views.RoadStopsView
+                                    android:id="@+id/roadStops"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    app:strokeColor="@color/colorPrimaryLight"
+                                    app:textColor="@color/white.light"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="@color/grey.light">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/grey.dark"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/carInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textSize="16sp"
+                                    android:layout_margin="20dp"
+                                    android:textColor="@color/white"
+                                    tools:text="AI03537AI, Золотой, Acura,"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/grey.dark">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="@color/grey.light"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    app:textAllCaps="true"
+                                    android:textColor="@color/colorPrimary"
+                                    android:text="Авто направилось к вам "/>
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16sp"
+                                    app:textAllCaps="true"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:textColor="@color/white"
+                                    android:text="Встречайте через"/>
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20sp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:textColor="@color/colorPrimary"
+                                    tools:text="27 минут"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_date"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/formDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="На сейчас"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_money"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/formMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            tools:text="120 грн."/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_time"/>
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/formTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="В пути 18 м."/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <Button
+                android:id="@+id/btn_cancel_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_order"
+                android:textAllCaps="true"
+                android:minWidth="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_quarter"
+                android:layout_marginBottom="@dimen/margin_quarter"
+                style="@style/AppTheme.Button.PrimaryLight"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

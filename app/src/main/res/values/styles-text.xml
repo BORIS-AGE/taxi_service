@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTextAppearance">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DefaultTextView">
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
+    </style>
+
+    <style name="AppTextAppearance.Actionbar" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif</item>
+    </style>
+
+    <style name="AppTextAppearance.Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/text_size_subheading</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
+    </style>
+
+    <style name="AppTextAppearance.Display1">
+        <item name="android:textSize">@dimen/text_size_display_1</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">sans-serif</item>
+    </style>
+
+    <style name="AppTextAppearance.Display1.Inverse">
+        <item name="android:textColor">@color/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="AppTextAppearance.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Title.Inverse">
+        <item name="android:textColor">@color/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="AppTextAppearance.Subheading">
+        <item name="android:textSize">@dimen/text_size_subheading</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Subheading.Inverse">
+        <item name="android:textColor">@color/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="AppTextAppearance.Headline">
+        <item name="android:textSize">@dimen/text_size_headline</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Headline.Inverse">
+        <item name="android:textColor">@color/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="AppTextAppearance.Body1">
+        <item name="android:textSize">@dimen/text_size_body_1</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTextAppearance.Body1.Inverse">
+        <item name="android:textColor">@color/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="AppTextAppearance.Body1.Secondary">
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="AppTextAppearance.Body2">
+        <item name="android:textSize">@dimen/text_size_body_2</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="AppTextAppearance.Caption">
+        <item name="android:textSize">@dimen/text_size_caption</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="AppTextAppearance.EditText">
+        <item name="android:textSize">@dimen/text_size_edit_text</item>
+    </style>
+
+    <style name="AppTextAppearance.EditText.Grey">
+        <item name="android:textColorHint">@color/colorGrey</item>
+        <item name="android:textColor">@color/colorGreyDark</item>
+    </style>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_double">
+
+            <TextView
+                style="@style/AppTextAppearance.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_double"
+                android:gravity="center"
+                android:text="@string/registration_verification" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppTextAppearance.Subheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sms_confirmation_code"
+                    android:layout_marginBottom="@dimen/margin_eighth"/>
+
+                <EditText
+                    style="@style/AppTheme.EditText.Rounded"
+                    android:id="@+id/et_confirmation_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:maxEms="4"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="####"
+                    tools:hint="Confirmation code" />
+
+                <Button
+                    style="@style/AppTheme.Button.PrimaryDark"
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_base_plus"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="@dimen/margin_quarter"/>
+
+                <Button
+                    style="@style/AppTheme.Button.PrimaryDark.Small"
+                    android:id="@+id/btn_send_again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_quarter_plus"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/send_again"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="@dimen/margin_quarter"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

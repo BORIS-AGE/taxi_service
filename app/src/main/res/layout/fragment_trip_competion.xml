@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/screenTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:textSize="20sp"
+                    android:text="@string/view_text_grade_of_driver"/>
+
+                <!--<android.support.v7.widget.AppCompatTextView-->
+                    <!--android:id="@+id/driverName"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/screenTitle"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:textSize="20sp"-->
+                    <!--tools:text="Иванов Петр Иванович"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/genderContainer"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_below="@id/driverName"-->
+                    <!--android:layout_marginBottom="25dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/genderImage"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:src="@drawable/ic_user_male"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/genderText"-->
+                        <!--android:textColor="#515151"-->
+                        <!--android:textSize="12sp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/man"/>-->
+
+                <!--</LinearLayout>-->
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/sendFeedbackTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/screenTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/view_text_feedback"/>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/grey.light"
+                    android:layout_below="@id/sendFeedbackTitle"/>
+
+                <LinearLayout
+                    android:id="@+id/feedbackContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/divider"/>
+
+                <Button
+                    style="@style/AppTheme.Button.Primary"
+                    android:id="@+id/btn_trip_completion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="140dp"
+                    android:layout_below="@id/feedbackContainer"
+                    android:text="@string/view_text_trip_completion"
+                    android:textSize="@dimen/text_size_body_1"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="35dp"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</layout>

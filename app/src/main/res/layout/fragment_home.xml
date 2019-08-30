@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/RelativeLayaot"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+        <fragment
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:name="com.sergey.taxiservice.ui.fragments.map.MapFragment" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/ic_logo" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_base">
+
+            <TextView
+                style="@style/AppTextAppearance.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where_you_want_arrive_to"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_half_plus_eight"/>
+
+            <EditText
+                style="@style/AppTheme.EditText"
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:inputType="text"
+                android:hint='@{@string/example + ": " + @string/example_address}'
+                android:textSize="@dimen/text_size_subheading"
+                android:layout_marginBottom="@dimen/margin_base_plus"
+                tools:text="Login" />
+
+            <Button
+                style="@style/AppTheme.Button.Primary"
+                android:id="@+id/btn_find_companion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="140dp"
+                android:text="@string/find_companion"
+                android:textSize="@dimen/text_size_body_1"
+                android:layout_marginBottom="@dimen/margin_base"
+                android:layout_gravity="center"/>
+
+            <Button
+                style="@style/AppTheme.Button.PrimaryLight"
+                android:id="@+id/btn_solo_ride"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="140dp"
+                android:text="@string/solo_ride"
+                android:textSize="@dimen/text_size_body_1"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
